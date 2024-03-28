@@ -1,0 +1,154 @@
+.review {
+    padding: 30px 0;
+    border-top: 1px solid $grey;
+
+    &--file {
+        padding: 0;
+        border-top: none;
+    }
+
+    &__date {
+        display: block;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 4%;
+        color: $grey-light;
+        font-family: "Inter-Regular";
+
+        &--reply {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__rating {
+        padding: 8px 0;
+    }
+
+    &__title {
+        font-family: "Inter-Medium";
+        font-weight: 500;
+        color: $dark;
+        font-size: 16px;
+        line-height: 16px;
+
+        &--overlay {
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__description {
+        padding: 24px 0;
+        font-family: "Inter-Regular";
+        font-size: 14px;
+        line-height: 21px;
+        color: $dark-gray;
+
+        &--reply {
+            padding: 16px 0;
+        }
+
+        &--overlay {
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+    &__photos {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 32px;
+    }
+
+    &__photo {
+        position: relative;
+
+        &:nth-child(n+2) {
+            margin-left: 6px;
+        }
+    }
+
+    &__img {
+        border-radius: 5px;
+        width: 90px;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    &__reply {
+        position: relative;
+        // padding-top: 32px;
+        padding-left: 84px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0px;
+            left: 40px;
+            width: 24px;
+            height: 27px;
+            background-image: url(../img/reply.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 10;
+        }
+    }
+
+    &__box {
+        background-color: #F6F6F6;
+        padding: 24px;
+        border-radius: 5px;
+    }
+
+    &__signature {
+        color: $dark;
+        font-size: 12px;
+        line-height: 12px;
+        font-family: "Inter-Medium";
+    }
+
+    &__default {
+        position: relative;
+        width: 90px;
+        height: 120px;
+        border-radius: 5px;
+        border: 1px solid $blue;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(230, 243, 253, 1);
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 42px;
+            height: 45px;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            background-image: url(../img/upload.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+
+    &__close {
+        @include button();
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $dark;
+
+        .review__svg {
+            transform: translateX(-2px);
+        }
+    }
+}

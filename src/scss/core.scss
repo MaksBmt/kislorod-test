@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/**
+ * Основные стили
+ **/
+
+html {
+  color: #000000;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-decoration-skip: objects;
+  box-sizing: border-box;
+  margin: 0;
+  background-color: $white;
+}
+
+main {
+  padding: 0 16px;
+
+  @media(min-width: $md) {
+    padding: 0 30px;
+  }
+
+  @media(min-width: $lg) {
+    padding-left: 240px;
+    padding-right: 240px;
+    padding-bottom: 100px;
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[alt] {
+  font-size: 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+*:hover {
+  transition: all 0.2s ease 0s;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  @include link-reset();
+}
+
+ul {
+  @include list-reset();
+}

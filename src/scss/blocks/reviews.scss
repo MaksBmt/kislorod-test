@@ -1,0 +1,12 @@
+.reviews {
+    // padding: 0 16px;
+
+    @media(min-width: $md) {
+        // padding: 0 30px;
+    }
+
+    @media(min-width: $lg) {
+        // padding-left: 240px;
+        // padding-right: 240px;
+    }
+}

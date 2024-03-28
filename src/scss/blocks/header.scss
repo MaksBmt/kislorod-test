@@ -1,0 +1,26 @@
+.header {
+    box-sizing: border-box;
+    padding-top: 56px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+
+    @media(min-width: $md) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    @media(min-width: $lg) {
+        padding-top: 96px;
+        padding-left: 240px;
+        padding-right: 240px;
+    }
+
+    &__title {
+        font-family: "Inter-Medium";
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+        color: $dark;
+    }
+}

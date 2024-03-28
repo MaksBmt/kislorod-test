@@ -1,0 +1,13 @@
+.rating {
+    &__svg {
+        fill: $orange;
+
+        &--gray {
+            fill: $grey;
+        }
+    }
+
+    &--form {
+        display: flex;
+    }
+}
